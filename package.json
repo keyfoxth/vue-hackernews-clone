@@ -1,0 +1,20 @@
+{
+  "name": "vue-hackernews",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyfoxth/vue-hackernews.git"
+  },
+  "author": "Keyfoxth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keyfoxth/vue-hackernews/issues"
+  },
+  "homepage": "https://github.com/keyfoxth/vue-hackernews",
+  "devDependencies": {
+    "webpack": "^1.12.6",
+    "webpack-dev-server": "^1.12.1"
+  }
+}
