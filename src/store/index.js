@@ -29,15 +29,15 @@ store.fetchItem = id => {
   })
 }
 
-store.fecthItems = ids => {
+store.fetchItems = ids => {
   if (!ids || !ids.length) {
     return Promise.resolve([])
   } else {
-    return Promise.all(ids.map(id => store.fecthItems(id)))
+    return Promise.all(ids.map(id => store.fetchItem(id)))
   }
 }
 
-store.fechItemsByPage = page => {
+store.fetchItemsByPage = page => {
   const start = (page - 1) * storiesPerPage
   const end = page * storiesPerPage
   const ids = topStoryIds.slice(start, end)
