@@ -41,16 +41,23 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.user-view
-  color $gray
-  li
-    margin 5px 0
-  .label
-    display inline-block
-    min-width 60px
-  .about
-    margin-top 1em
-  .links a
-    text-decoration underline
+<style lang="sass">
+@import "../variables.scss";
+
+.user-view {
+  color: $gray;
+  li {
+    margin: 5px 0;
+  }
+  .label {
+    display: inline-block;
+    min-width: 60px;
+  }
+  .about {
+    margin-top: 1em;
+  }
+  .links a {
+    text-decoration: underline;
+  }
+}
 </style>

@@ -42,26 +42,33 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import "../variables.styl"
+<style lang="sass">
+@import "../variables.scss";
 
-.comhead
-  color $gray
-  font-size 11px
-  margin-bottom 8px
-  a
-    color $gray
-    &:hover
-      text-decoration underline
-  .toggle
-    margin-right 4px
+.comhead {
+  color: $gray;
+  font-size: 11px;
+  margin-bottom: 8px;
+  a {
+    color: $gray;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .toggle {
+    margin-right: 4px;
+  }
+}
 
-.comment-content
-  margin 0 0 16px 24px
-  word-wrap break-word
-  code
-    white-space pre-wrap
+.comment-content {
+  margin: 0 0 16px 24px;
+  word-wrap: break-word;
+  code {
+    white-space: pre-wrap;
+  }
+}
 
-.child-comments
-  margin 8px 0 8px 22px
+.child-comments {
+  margin: 8px 0 8px 22px;
+}
 </style>
