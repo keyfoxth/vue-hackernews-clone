@@ -13251,12 +13251,12 @@
 	var hotAPI = require("vue-hot-reload-api")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = "-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./App.vue"
+	var id = "-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./App.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./App.vue"], function () {
+	module.hot.accept(["-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./App.vue"], function () {
 	var newOptions = null
 	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./App.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./App.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -13278,8 +13278,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78fac476&file=App.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78fac476&file=App.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78fac476&file=App.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78fac476&file=App.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -13297,7 +13297,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  font-family: Verdana;\n  font-size: 13px;\n  height: 100%; }\n\nul {\n  list-style-type: none;\n  padding: 0;\n  margin: 0; }\n\na {\n  color: #000;\n  cursor: pointer;\n  text-decoration: none; }\n\n#wrapper {\n  background-color: #f6f6ef;\n  position: relative;\n  width: 85%;\n  min-height: 80px;\n  margin: 0 auto; }\n\n#header {\n  background-color: #f60;\n  height: 24px;\n  position: relative; }\n  #header h1 {\n    font-weight: bold;\n    font-size: 13px;\n    display: inline-block;\n    vertical-align: middle;\n    margin: 0; }\n  #header .source {\n    color: #fff;\n    font-size: 11px;\n    position: absolute;\n    top: 4px;\n    right: 4px; }\n    #header .source a {\n      color: #fff; }\n      #header .source a:hover {\n        text-decoration: underline; }\n\n#yc {\n  border: 1px solid #fff;\n  margin: 2px;\n  display: inline-block;\n  vertical-align: middle; }\n  #yc img {\n    vertical-align: middle; }\n\n.view {\n  position: absolute;\n  background-color: #f6f6ef;\n  width: 100%;\n  -webkit-transition: opacity .2s ease;\n  transition: opacity .2s ease;\n  box-sizing: border-box;\n  padding: 8px 20px; }\n  .view.v-enter, .view.v-leave {\n    opacity: 0; }\n\n@media screen and (max-width: 700px) {\n  html, body {\n    margin: 0; }\n  #wrapper {\n    width: 100%; } }\n", ""]);
+	exports.push([module.id, "html,\nbody {\n  font-family: Verdana;\n  font-size: 13px;\n  height: 100%;\n}\nul {\n  list-style-type: none;\n  padding: 0;\n  margin: 0;\n}\na {\n  color: #000;\n  cursor: pointer;\n  text-decoration: none;\n}\n#wrapper {\n  background-color: #f6f6ef;\n  position: relative;\n  width: 85%;\n  min-height: 80px;\n  margin: 0 auto;\n}\n#header {\n  background-color: #f60;\n  height: 24px;\n  position: relative;\n}\n#header h1 {\n  font-weight: bold;\n  font-size: 13px;\n  display: inline-block;\n  vertical-align: middle;\n  margin: 0;\n}\n#header .source {\n  color: #fff;\n  font-size: 11px;\n  position: absolute;\n  top: 4px;\n  right: 4px;\n}\n#header .source a {\n  color: #fff;\n}\n#header .source a:hover {\n  text-decoration: underline;\n}\n#yc {\n  border: 1px solid #fff;\n  margin: 2px;\n  display: inline-block;\n  vertical-align: middle;\n}\n#yc img {\n  vertical-align: middle;\n}\n.view {\n  position: absolute;\n  background-color: #f6f6ef;\n  width: 100%;\n  -webkit-transition: opacity 0.2s ease;\n  transition: opacity 0.2s ease;\n  box-sizing: border-box;\n  padding: 8px 20px;\n}\n.view.v-enter,\n.view.v-leave {\n  opacity: 0;\n}\n@media screen and (max-width: 700px) {\n  html,\n  body {\n    margin: 0;\n  }\n  #wrapper {\n    width: 100%;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -13616,7 +13616,7 @@
 /* 82 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"wrapper\">\r\n    <!-- header -->\r\n    <div id=\"header\">\r\n      <a id=\"yc\" href=\"http://www.ycombinator.com\">\r\n        <img src=\"https://news.ycombinator.com/y18.gif\">\r\n      </a>\r\n      <h1><a href=\"#/\">Hacker News</a></h1>\r\n      <span class=\"source\">\r\n        Built with <a href=\"http://vuejs.org\" target=\"_blank\">Vue.js</a> |\r\n        <a href=\"https://github.com/keyfoxth/vue-hackernews\" target=\"_blank\">Source</a>\r\n      </span>\r\n    </div>\r\n    <!-- main view -->\r\n    <router-view\r\n      class=\"view\"\r\n      keep-alive\r\n      transition\r\n      transition-mode=\"out-in\">\r\n    </router-view>\r\n  </div>";
+	module.exports = "<div id=\"wrapper\"><!-- header--><div id=\"header\"><a id=\"yc\" href=\"http://www.ycombinator.com\"><img src=\"https://news.ycombinator.com/y18.gif\"/></a><h1><a href=\"#/\">Hacker News</a></h1><span class=\"source\">Built with <a href=\"http://vuejs.org\" target=\"_blank\">Vue.js</a> | <a href=\"https://github.com/keyfoxth/vue-hackernews\" target=\"_blank\">Source</a></span></div><!-- main view--><router-view keep-alive=\"\" transition=\"\" transition-mode=\"out-in\" class=\"view\"></router-view></div>";
 
 /***/ },
 /* 83 */
@@ -13634,10 +13634,10 @@
 	if (!hotAPI.compatible) return
 	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./NewsView.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./NewsView.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./NewsView.vue"], function () {
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./NewsView.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./NewsView.vue"], function () {
 	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./NewsView.vue")
 	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./NewsView.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./NewsView.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -13659,8 +13659,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f656e6da&file=NewsView.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsView.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f656e6da&file=NewsView.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsView.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f656e6da&file=NewsView.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsView.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f656e6da&file=NewsView.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsView.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -13678,7 +13678,7 @@
 
 
 	// module
-	exports.push([module.id, ".news-view {\n  padding-left: 5px;\n  padding-right: 15px; }\n  .news-view.loading:before {\n    content: \"Loading...\";\n    position: absolute;\n    top: 16px;\n    left: 20px; }\n  .news-view .nav {\n    padding: 10px 10px 10px 40px;\n    margin-top: 10px;\n    border-top: 2px solid #f60; }\n    .news-view .nav a {\n      margin-right: 10px; }\n      .news-view .nav a:hover {\n        text-decoration: underline; }\n", ""]);
+	exports.push([module.id, ".news-view {\n  padding-left: 5px;\n  padding-right: 15px;\n}\n.news-view.loading:before {\n  content: \"Loading...\";\n  position: absolute;\n  top: 16px;\n  left: 20px;\n}\n.news-view .nav {\n  padding: 10px 10px 10px 40px;\n  margin-top: 10px;\n  border-top: 2px solid #f60;\n}\n.news-view .nav a {\n  margin-right: 10px;\n}\n.news-view .nav a:hover {\n  text-decoration: underline;\n}\n", ""]);
 
 	// exports
 
@@ -13704,13 +13704,10 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-
 	  name: 'NewsView',
-
 	  components: {
 	    Item: _Item2.default
 	  },
-
 	  data: function data() {
 	    return {
 	      page: 1,
@@ -13731,7 +13728,6 @@
 	      });
 	    }
 	  },
-
 	  created: function created() {
 	    _store2.default.on('topstories-updated', this.update);
 	  },
@@ -13748,7 +13744,6 @@
 	      });
 	    }
 	  },
-
 	  filters: {
 	    formatItemIndex: function formatItemIndex(index) {
 	      return (this.page - 1) * _store2.default.storiesPerPage + index + 1;
@@ -15462,10 +15457,10 @@
 	if (!hotAPI.compatible) return
 	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Item.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Item.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Item.vue"], function () {
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Item.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Item.vue"], function () {
 	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Item.vue")
 	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Item.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Item.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -15487,8 +15482,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-acdc38e4&file=Item.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Item.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-acdc38e4&file=Item.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Item.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-acdc38e4&file=Item.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Item.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-acdc38e4&file=Item.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Item.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15506,7 +15501,7 @@
 
 
 	// module
-	exports.push([module.id, ".item {\n  padding: 2px 0 2px 40px;\n  position: relative;\n  -webkit-transition: background-color .2s ease;\n  transition: background-color .2s ease; }\n  .item p {\n    margin: 2px 0; }\n  .item .title:visited {\n    color: #828282; }\n  .item .index {\n    color: #828282;\n    position: absolute;\n    width: 30px;\n    text-align: right;\n    left: 0;\n    top: 4px; }\n  .item .domain, .item .subtext {\n    font-size: 11px;\n    color: #828282; }\n    .item .domain a, .item .subtext a {\n      color: #828282; }\n  .item .subtext a:hover {\n    text-decoration: underline; }\n", ""]);
+	exports.push([module.id, ".item {\n  padding: 2px 0 2px 40px;\n  position: relative;\n  -webkit-transition: background-color 0.2s ease;\n  transition: background-color 0.2s ease;\n}\n.item p {\n  margin: 2px 0;\n}\n.item .title:visited {\n  color: #828282;\n}\n.item .index {\n  color: #828282;\n  position: absolute;\n  width: 30px;\n  text-align: right;\n  left: 0;\n  top: 4px;\n}\n.item .domain,\n.item .subtext {\n  font-size: 11px;\n  color: #828282;\n}\n.item .domain a,\n.item .subtext a {\n  color: #828282;\n}\n.item .subtext a:hover {\n  text-decoration: underline;\n}\n", ""]);
 
 	// exports
 
@@ -15521,14 +15516,11 @@
 	  value: true
 	});
 	exports.default = {
-
 	  name: 'Item',
-
 	  props: {
 	    item: Object,
 	    index: Number
 	  },
-
 	  computed: {
 	    href: function href() {
 	      return this.item.url || '#/item/' + this.item.id;
@@ -15546,13 +15538,13 @@
 /* 101 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"item\">\r\n    <span class=\"index\">{{index}}.</span>\r\n    <p>\r\n      <a class=\"title\" :href=\"href\" target=\"_blank\">{{{item.title}}}</a>\r\n      <span class=\"domain\" v-show=\"showDomain\">\r\n        ({{item.url | domain}})\r\n      </span>\r\n    </p>\r\n    <p class=\"subtext\">\r\n      <span v-show=\"showInfo\">\r\n        {{item.score}} points by\r\n        <a :href=\"'#/user/' + item.by\">{{item.by}}</a>\r\n      </span>\r\n      {{item.time | fromNow}} ago\r\n      <span class=\"comments-link\" v-show=\"showInfo\">\r\n        | <a :href=\"'#/item/' + item.id\">{{item.descendants}} {{item.descendants | pluralize 'comment'}}</a>\r\n      </span>\r\n    </p>\r\n  </div>";
+	module.exports = "<div class=\"item\"><span class=\"index\">{{index}}.</span><p><a :href=\"href\" target=\"_blank\" class=\"title\">{{{item.title}}}</a><span v-show=\"showDomain\" class=\"domain\">({{item.url | domain}})</span></p><p class=\"subtext\"><span v-show=\"showInfo\">{{item.score}} points by <a :href=\"'#/user/' + item.by\">{{item.by}}</a></span> {{item.time | fromNow}} ago<span v-show=\"showInfo\" class=\"comments-link\">| <a :href=\"'#/item/' + item.id\">{{item.descendants}} {{item.descendants | pluralize 'comment'}}</a></span></p></div>";
 
 /***/ },
 /* 102 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"news-view\" :class=\"{ loading: !items.length }\">\r\n    <!-- item list -->\r\n    <item\r\n      v-for=\"item in items\"\r\n      :item=\"item\"\r\n      :index=\"$index | formatItemIndex\"\r\n      track-by=\"id\">\r\n    </item>\r\n    <!-- navigation -->\r\n    <div class=\"nav\" v-show=\"items.length > 0\">\r\n      <a v-if=\"page > 1\" :href=\"'#/news/' + (page - 1)\">&lt; prev</a>\r\n      <a v-if=\"page < 4\" :href=\"'#/news/' + (page + 1)\">more...</a>\r\n    </div>\r\n  </div>";
+	module.exports = "<div :class=\"{ loading: !items.length }\" class=\"news-view\"><!-- item list--><item v-for=\"item in items\" :item=\"item\" :index=\"$index | formatItemIndex\" track-by=\"id\"></item><!-- navigation--><div v-show=\"items.length &gt; 0\" class=\"nav\"><a v-if=\"page &gt; 1\" :href=\"'#/news/' + (page - 1)\">< prev</a><a v-if=\"page &lt; 4\" :href=\"'#/news/' + (page + 1)\">more...</a></div></div>";
 
 /***/ },
 /* 103 */
@@ -15570,10 +15562,10 @@
 	if (!hotAPI.compatible) return
 	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./ItemView.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./ItemView.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./ItemView.vue"], function () {
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./ItemView.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./ItemView.vue"], function () {
 	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./ItemView.vue")
 	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./ItemView.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./ItemView.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -15595,8 +15587,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-70fe3cd3&file=ItemView.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./ItemView.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-70fe3cd3&file=ItemView.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./ItemView.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-70fe3cd3&file=ItemView.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./ItemView.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-70fe3cd3&file=ItemView.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./ItemView.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15614,7 +15606,7 @@
 
 
 	// module
-	exports.push([module.id, ".item-view .item {\n  padding-left: 0;\n  margin-bottom: 30px; }\n  .item-view .item .index {\n    display: none; }\n\n.item-view .poll-options {\n  margin-left: 30px;\n  margin-bottom: 40px; }\n  .item-view .poll-options li {\n    margin: 12px 0; }\n  .item-view .poll-options p {\n    margin: 8px 0; }\n  .item-view .poll-options .subtext {\n    color: #828282;\n    font-size: 11px; }\n", ""]);
+	exports.push([module.id, ".item-view .item {\n  padding-left: 0;\n  margin-bottom: 30px;\n}\n.item-view .item .index {\n  display: none;\n}\n.item-view .poll-options {\n  margin-left: 30px;\n  margin-bottom: 40px;\n}\n.item-view .poll-options li {\n  margin: 12px 0;\n}\n.item-view .poll-options p {\n  margin: 8px 0;\n}\n.item-view .poll-options .subtext {\n  color: #828282;\n  font-size: 11px;\n}\n", ""]);
 
 	// exports
 
@@ -15644,14 +15636,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-
 	  name: 'ItemView',
-
 	  components: {
 	    Item: _Item2.default,
 	    Comment: _Comment2.default
 	  },
-
 	  data: function data() {
 	    return {
 	      item: {},
@@ -15691,10 +15680,10 @@
 	if (!hotAPI.compatible) return
 	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Comment.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Comment.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Comment.vue"], function () {
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Comment.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Comment.vue"], function () {
 	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./Comment.vue")
 	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Comment.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./Comment.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -15716,8 +15705,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-917af998&file=Comment.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Comment.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-917af998&file=Comment.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Comment.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-917af998&file=Comment.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Comment.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-917af998&file=Comment.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Comment.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15735,7 +15724,7 @@
 
 
 	// module
-	exports.push([module.id, ".comhead {\n  color: #828282;\n  font-size: 11px;\n  margin-bottom: 8px; }\n  .comhead a {\n    color: #828282; }\n    .comhead a:hover {\n      text-decoration: underline; }\n  .comhead .toggle {\n    margin-right: 4px; }\n\n.comment-content {\n  margin: 0 0 16px 24px;\n  word-wrap: break-word; }\n  .comment-content code {\n    white-space: pre-wrap; }\n\n.child-comments {\n  margin: 8px 0 8px 22px; }\n", ""]);
+	exports.push([module.id, ".comhead {\n  color: #828282;\n  font-size: 11px;\n  margin-bottom: 8px;\n}\n.comhead a {\n  color: #828282;\n}\n.comhead a:hover {\n  text-decoration: underline;\n}\n.comhead .toggle {\n  margin-right: 4px;\n}\n.comment-content {\n  margin: 0 0 16px 24px;\n  word-wrap: break-word;\n}\n.comment-content code {\n  white-space: pre-wrap;\n}\n.child-comments {\n  margin: 8px 0 8px 22px;\n}\n", ""]);
 
 	// exports
 
@@ -15757,13 +15746,10 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-
 	  name: 'Comment',
-
 	  props: {
 	    comment: Object
 	  },
-
 	  data: function data() {
 	    return {
 	      childComments: [],
@@ -15785,13 +15771,13 @@
 /* 111 */
 /***/ function(module, exports) {
 
-	module.exports = "<li v-show=\"comment.text\">\r\n    <div class=\"comhead\">\r\n      <a class=\"toggle\" @click=\"open = !open\">{{open ? '[-]' : '[+]'}}</a>\r\n      <a :href=\"'#/user/' + comment.by\">{{comment.by}}</a>\r\n      {{comment.time | fromNow}} ago\r\n    </div>\r\n    <p class=\"comment-content\" v-show=\"open\">\r\n      {{{comment.text}}}\r\n    </p>\r\n    <ul class=\"child-comments\" v-if=\"comment.kids\" v-show=\"open\">\r\n      <comment v-for=\"comment in childComments\" :comment=\"comment\"></comment>\r\n    </ul>\r\n  </li>";
+	module.exports = "<li v-show=\"comment.text\"><div class=\"comhead\"><a @click=\"open = !open\" class=\"toggle\">{{open ? '[-]' : '[+]'}}</a> <a :href=\"'#/user/' + comment.by\">{{comment.by}}</a> {{comment.time | fromNow}} ago</div><p v-show=\"open\" class=\"comment-content\">{{{comment.text}}}</p><ul v-if=\"comment.kids\" v-show=\"open\" class=\"child-comments\"><comment v-for=\"comment in childComments\" :comment=\"comment\"></comment></ul></li>";
 
 /***/ },
 /* 112 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"item-view\" v-show=\"item\">\r\n    <item :item=\"item\"></item>\r\n    <ul class=\"poll-options\" v-if=\"pollOptions\">\r\n      <li v-for=\"option in pollOptions\">\r\n        <p>{{option.text}}</p>\r\n        <p class=\"subtext\">{{option.score}} points</p>\r\n      </li>\r\n    </ul>\r\n    <ul class=\"comments\" v-if=\"comments\">\r\n      <comment\r\n        v-for=\"comment in comments\"\r\n        :comment=\"comment\">\r\n      </comment>\r\n    </ul>\r\n    <p v-show=\"!comments.length\">No comments yet.</p>\r\n  </div>";
+	module.exports = "<div v-show=\"item\" class=\"item-view\"><item :item=\"item\"></item><ul v-if=\"pollOptions\" class=\"poll-options\"><li v-for=\"option in pollOptions\"><p>{{option.text}}</p><p class=\"subtext\">{{option.score}} points</p></li></ul><ul v-if=\"comments\" class=\"comments\"><comment v-for=\"comment in comments\" :comment=\"comment\"></comment></ul><p v-show=\"!comments.length\">No comments yet.</p></div>";
 
 /***/ },
 /* 113 */
@@ -15809,10 +15795,10 @@
 	if (!hotAPI.compatible) return
 	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./UserView.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./UserView.vue","-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./UserView.vue"], function () {
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./UserView.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./UserView.vue"], function () {
 	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./UserView.vue")
 	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
-	var newTemplate = require("-!vue-html!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./UserView.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./UserView.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
@@ -15834,8 +15820,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1dc3758b&file=UserView.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./UserView.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1dc3758b&file=UserView.vue!./../../node_modules/sass-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./UserView.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1dc3758b&file=UserView.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./UserView.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1dc3758b&file=UserView.vue!./../../node_modules/stylus-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./UserView.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15853,7 +15839,7 @@
 
 
 	// module
-	exports.push([module.id, ".user-view {\n  color: #828282; }\n  .user-view li {\n    margin: 5px 0; }\n  .user-view .label {\n    display: inline-block;\n    min-width: 60px; }\n  .user-view .about {\n    margin-top: 1em; }\n  .user-view .links a {\n    text-decoration: underline; }\n", ""]);
+	exports.push([module.id, ".user-view {\n  color: #828282;\n}\n.user-view li {\n  margin: 5px 0;\n}\n.user-view .label {\n  display: inline-block;\n  min-width: 60px;\n}\n.user-view .about {\n  margin-top: 1em;\n}\n.user-view .links a {\n  text-decoration: underline;\n}\n", ""]);
 
 	// exports
 
@@ -15875,9 +15861,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-
 	  name: 'UserView',
-
 	  data: function data() {
 	    return {
 	      user: {}
@@ -15899,7 +15883,7 @@
 /* 117 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"user-view\" v-show=\"user\">\r\n    <ul>\r\n      <li><span class=\"label\">user:</span> {{user.id}}</li>\r\n      <li><span class=\"label\">created:</span> {{user.created | fromNow}} ago</li>\r\n      <li><span class=\"label\">karma:</span> {{user.karma}}</li>\r\n      <li>\r\n        <span class=\"label\">about:</span>\r\n        <div class=\"about\">\r\n          {{{user.about}}}\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <p class=\"links\">\r\n      <a :href=\"'https://news.ycombinator.com/submitted?id=' + user.id\">submissions</a><br>\r\n      <a :href=\"'https://news.ycombinator.com/threads?id=' + user.id\">comments</a>\r\n    </p>\r\n  </div>";
+	module.exports = "<div v-show=\"user\" class=\"user-view\"><ul><li> <span class=\"label\">user:</span> {{user.id}}</li><li> <span class=\"label\">created:</span> {{user.created | fromNow}} ago</li><li> <span class=\"label\">karma:</span> {{user.karma}}</li><li><span class=\"label\">about:</span><div class=\"about\">{{{user.about}}}</div></li></ul><p class=\"links\"><a :href=\"'https://news.ycombinator.com/submitted?id=' + user.id\">submissions</a><br/><a :href=\"'https://news.ycombinator.com/threads?id=' + user.id\">comments</a></p></div>";
 
 /***/ }
 /******/ ]);
