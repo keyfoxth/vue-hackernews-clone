@@ -1,36 +1,56 @@
-<template>
-  <div class="user-view" v-show="user">
-    <ul>
-      <li><span class="label">user:</span> {{user.id}}</li>
-      <li><span class="label">created:</span> {{user.created | fromNow}} ago</li>
-      <li><span class="label">karma:</span> {{user.karma}}</li>
-      <li>
-        <span class="label">about:</span>
-        <div class="about">
-          {{{user.about}}}
-        </div>
-      </li>
-    </ul>
-    <p class="links">
-      <a :href="'https://news.ycombinator.com/submitted?id=' + user.id">submissions</a><br>
-      <a :href="'https://news.ycombinator.com/threads?id=' + user.id">comments</a>
-    </p>
-  </div>
+<template lang="jade">
+  .user-view(v-show="user")
+    ul
+      li
+        =" "
+        span.label user:
+        =" "
+        | {{user.id}}
+      li
+        =" "
+        span.label created:
+        =" "
+        | {{user.created | fromNow}} ago
+      li
+        =" "
+        span.label karma:
+        =" "
+        | {{user.karma}}
+      li
+        span.label about:
+        .about {{{user.about}}}
+    p.links
+      a(:href="'https://news.ycombinator.com/submitted?id=' + user.id") submissions
+      br
+      a(:href="'https://news.ycombinator.com/threads?id=' + user.id") comments
 </template>
+
+<style lang="stylus">
+@import "../variables.styl"
+
+.user-view
+  color $gray
+  li
+    margin 5px 0
+  .label
+    display inline-block
+    min-width 60px
+  .about
+    margin-top 1em
+  .links a
+    text-decoration underline
+</style>
 
 <script>
 import store from '../store'
 
 export default {
-
   name: 'UserView',
-
   data () {
     return {
       user: {}
     }
   },
-
   route: {
     data ({ to }) {
       return {
@@ -40,24 +60,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass">
-@import "../variables.scss";
-
-.user-view {
-  color: $gray;
-  li {
-    margin: 5px 0;
-  }
-  .label {
-    display: inline-block;
-    min-width: 60px;
-  }
-  .about {
-    margin-top: 1em;
-  }
-  .links a {
-    text-decoration: underline;
-  }
-}
-</style>
