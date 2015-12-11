@@ -13,7 +13,7 @@
         =" "
         | |
         =" "
-        a(href="https://github.com/keyfoxth/vue-hackernews", target="_blank") Source
+        a(href="https://github.com/keyfoxth/vue-hackernews-clone", target="_blank") Source
     // main view
     router-view.view(keep-alive='', transition='', transition-mode='out-in')
 </template>
